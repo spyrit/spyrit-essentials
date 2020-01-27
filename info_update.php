@@ -13,7 +13,7 @@ function spyrit_essentials_plugin_info($res, $action, $args)
 
     if (false == $remote = get_transient('spyrit_upgrade_spyrit-essentials')) {
         $remote = wp_remote_get(
-            REMOTE_INFO_URL,
+            SPYRIT_ESSENTIALS_REMOTE_INFO_URL,
             [
                 'timeout' => 10,
                 'headers' => [
@@ -65,7 +65,7 @@ function spyrit_essentials_push_update($transient)
 
     if (false == $remote = get_transient('spyrit_upgrade_spyrit-essentials')) {
         $remote = wp_remote_get(
-            REMOTE_INFO_URL,
+            SPYRIT_ESSENTIALS_REMOTE_INFO_URL,
             array(
                 'timeout' => 10,
                 'headers' => array(
@@ -81,7 +81,7 @@ function spyrit_essentials_push_update($transient)
     if ($remote) {
         $remote = json_decode($remote['body']);
 
-        if ($remote && version_compare(PLUGIN_VERSION, $remote->version, '<') && version_compare($remote->requires, get_bloginfo('version'), '<')) {
+        if ($remote && version_compare(SPYRIT_ESSENTIALS_VERSION, $remote->version, '<') && version_compare($remote->requires, get_bloginfo('version'), '<')) {
             $res = new stdClass();
             $res->slug = 'spyrit-essentials';
             $res->plugin = 'spyrit-essentials/spyrit-essentials.php';
