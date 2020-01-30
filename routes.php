@@ -42,8 +42,8 @@ function spyrit_essentials_check_version(WP_REST_Request $request)
                 $versionManager['minor'][] = $offer->version;
             }
         }
-        $versionManager['major'] = array_unique($versionManager['major']);
-        $versionManager['minor'] = array_unique($versionManager['minor']);
+        $versionManager['major'] = array_values(array_unique($versionManager['major']));
+        $versionManager['minor'] = array_values(array_unique($versionManager['minor']));
         $response = $versionManager;
     }
     return json_encode($response);
