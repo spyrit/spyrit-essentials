@@ -30,10 +30,12 @@ function spyrit_essentials_check_version(WP_REST_Request $request)
             return [];
         }
         $currentVersion = get_bloginfo('version');
+        $plugins = get_plugins();
         $versionManager = [
             'current' => $currentVersion,
             'minor' => [],
             'major' => [],
+            'plugins' => [],
         ];
         foreach ($from_api->updates as $offer) {
             if (substr($offer->version, 0, 1) !== substr($currentVersion, 0, 1)) {
@@ -44,6 +46,15 @@ function spyrit_essentials_check_version(WP_REST_Request $request)
         }
         $versionManager['major'] = array_values(array_unique($versionManager['major']));
         $versionManager['minor'] = array_values(array_unique($versionManager['minor']));
+
+        foreach ($plugins as $plugin) {
+            $pluginArr = [
+                'name' => $plugin['TextDomain'],
+                'version' => $plugin['Version'],
+            ];
+            $versionManager['plugins'][] = $pluginArr;
+        }
+
         $response = $versionManager;
     }
     return json_encode($response);
