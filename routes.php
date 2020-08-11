@@ -32,25 +32,29 @@ function spyrit_essentials_check_version(WP_REST_Request $request)
         $currentVersion = get_bloginfo('version');
         $plugins = get_plugins();
         $versionManager = [
+            'blogName' => get_bloginfo('name'),
             'current' => $currentVersion,
             'minor' => [],
-            'major' => [],
             'plugins' => [],
         ];
         foreach ($from_api->updates as $offer) {
-            if (substr($offer->version, 0, 1) !== substr($currentVersion, 0, 1)) {
-                $versionManager['major'][] = $offer->version;
-            } else {
+            if (substr($offer->version, 4) !== substr($currentVersion, 4)) {
                 $versionManager['minor'][] = $offer->version;
             }
         }
-        $versionManager['major'] = array_values(array_unique($versionManager['major']));
         $versionManager['minor'] = array_values(array_unique($versionManager['minor']));
+
+        $activePlugins = [];
+        foreach(get_option('active_plugins') as $key => $value) {
+            $name = explode('/',$value);
+            $activePlugins[] = $name[0];
+        }
 
         foreach ($plugins as $plugin) {
             $pluginArr = [
                 'name' => $plugin['TextDomain'],
                 'version' => $plugin['Version'],
+                'active' => in_array($plugin['TextDomain'], $activePlugins),
             ];
             $versionManager['plugins'][] = $pluginArr;
         }
