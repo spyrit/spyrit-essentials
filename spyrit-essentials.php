@@ -4,10 +4,10 @@ Plugin Name: SPYRIT Essentials
 Description: Une extension qui permet d'améliorer la sécurité de votre site Wordpress.
 Author: SPYRIT
 Author URI: http://www.spyrit.net
-Version: 0.3
+Version: 0.3.1
 */
 
-const SPYRIT_ESSENTIALS_VERSION = "0.3";
+const SPYRIT_ESSENTIALS_VERSION = "0.3.1";
 const SPYRIT_ESSENTIALS_REMOTE_INFO_URL = "https://raw.githubusercontent.com/spyrit/spyrit-essentials/master/info.json";
 
 /* Mise à jour */

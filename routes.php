@@ -38,7 +38,9 @@ function spyrit_essentials_check_version(WP_REST_Request $request)
             'plugins' => [],
         ];
         foreach ($from_api->updates as $offer) {
-            if (substr($offer->version, 4) !== substr($currentVersion, 4)) {
+            if (
+                substr($offer->version, 0, 3) === substr($currentVersion, 0, 3) &&
+                substr($offer->version, 4) !== substr($currentVersion, 4)) {
                 $versionManager['minor'][] = $offer->version;
             }
         }

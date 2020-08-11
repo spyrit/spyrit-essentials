@@ -1,17 +1,17 @@
 {
   "name" : "Spyrit Essentials",
   "slug" : "spyrit-essentials-updater",
-  "download_url" : "https://code.spyrit.net/wordpress/plugins/spyrit-essentials/0.3/spyrit-essentials.zip",
-  "version" : "0.3",
+  "download_url" : "https://code.spyrit.net/wordpress/plugins/spyrit-essentials/0.3.1/spyrit-essentials.zip",
+  "version" : "0.3.1",
   "requires" : "3.0",
   "tested" : "5.4.2",
-  "last_updated" : "2020-08-11 16:00:00",
+  "last_updated" : "2020-08-11 17:40:00",
   "upgrade_notice" : "Une mise à jour de l'extension est disponible.",
   "author" : "SPYRIT",
   "author_homepage" : "https://www.spyrit.net",
   "sections" : {
     "description" : "L'extension SPYRIT Essentials, réservée aux clients SPYRIT, permet d'accroître la sécurité de votre site.",
     "installation" : "Téléverser l'extension sur votre site Wordpress, activez la et celle-ci sera fonctionnelle.",
-    "changelog" : "<h4>0.3</h4><ul><li>Ajout d'informations pour le monitoring.</li></ul>"
+    "changelog" : "<h4>0.3.1</h4><ul><li>Ajout d'informations pour le monitoring.</li></ul>"
   }
 }
