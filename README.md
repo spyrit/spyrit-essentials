@@ -1,9 +1,9 @@
 ## Plugin SPYRIT Essentials
 
-Contributors: paulkarampournis  
+Contributors: paulkarampournis
 Tags: spyrit, essentials  
 Requires at least: 3.0
-Tested up to: 5.4.2
+Tested up to: 5.6
 License: CC BY-NC 2.0
 License URI: https://creativecommons.org/licenses/by-nc/2.0/  
 
