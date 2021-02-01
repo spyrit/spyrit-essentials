@@ -35,13 +35,6 @@ class SpyritEssentialsSettingPage
      */
     public function spy_admin_page()
     {
-        if (isset($_GET['page']) && $_GET['page'] == 'spyrit-essentials-options' && isset($_GET['sync'])) {
-            try {
-                $synchro = new ExalideSynchro();
-                $synchro->execute();
-            } catch (Exception $e) {
-            }
-        }
 
         $this->options = get_option('spyrit-essentials'); ?>
         <div class="wrap">
