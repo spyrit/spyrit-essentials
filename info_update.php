@@ -34,7 +34,6 @@ function spyrit_essentials_plugin_info($res, $action, $args)
         $res->version = $remote->version;
         $res->tested = $remote->tested;
         $res->requires = $remote->requires;
-        $res->author = '<a href="' . $remote->author_homepage . '">' . $remote->author . '</a>';
         $res->download_link = $remote->download_url;
         $res->trunk = $remote->download_url;
         $res->last_updated = $remote->last_updated;
