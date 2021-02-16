@@ -11,10 +11,10 @@ add_action('rest_api_init', function () {
 
 function spy_check_version_permissions_check(WP_REST_Request $request)
 {
-    $options = get_option('spyrit-essentials');
+    $options = get_option('spyrit_essentials_config');
     $wptoken = isset($options['token']) && $options['token'] ? $options['token'] : null;
+    $requestToken = isset($_GET['token']) && $_GET['token'] ? $_GET['token'] : null;
 
-    $requestToken = isset($request->get_headers()['authorization'][0]) && $request->get_headers()['authorization'][0] ? $request->get_headers()['authorization'][0] : null;
     if ($wptoken && $requestToken && ($wptoken === $requestToken)) {
         return true;
     }

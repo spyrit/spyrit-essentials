@@ -55,11 +55,32 @@
           background: #f3f3f3;
           border-radius: 0;
         }
+        .icon:before {
+          color: #c0392b;
+          font-size: 19px;
+          height: 18px;
+        }
         table.form-table {
           background: #ffffff;
           margin: 0;
           th {
             padding: 20px 15px;
+          }
+        }
+        .warning-section {
+          background: rgb(192 57 43 / 10%);
+          padding: 10px 15px;
+          color: #000;
+          p {
+            margin: 0;
+            padding-left: 30px;
+            position: relative;
+            line-height: 14px;
+            .icon {
+              position: absolute;
+              left: 0;
+              top: 4px;
+            }
           }
         }
         p.submit {

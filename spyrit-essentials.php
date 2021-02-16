@@ -4,10 +4,10 @@ Plugin Name: SPYRIT Essentials
 Description: Une extension qui permet d'améliorer la sécurité de votre site Wordpress.
 Author: SPYRIT
 Author URI: http://www.spyrit.net
-Version: 0.4
+Version: 0.4.1
 */
 
-const SPYRIT_ESSENTIALS_VERSION = "0.4";
+const SPYRIT_ESSENTIALS_VERSION = "0.4.1";
 const SPYRIT_ESSENTIALS_REMOTE_INFO_URL = "https://raw.githubusercontent.com/spyrit/spyrit-essentials/master/info.json";
 $plugin_path = plugin_dir_path(__FILE__);
 
@@ -34,7 +34,7 @@ include_once $plugin_path . 'info_update.php';
  */
 include_once $plugin_path . 'features/miscellaneous.php';
 
-$options = get_option('spyrit-essentials');
+$options = get_option('spyrit_essentials_config');
 /**
  * Commentaires
  */
@@ -47,6 +47,20 @@ if (!isset($options['comments'])) {
  */
 if (!isset($options['emojis'])) {
     include_once $plugin_path . 'features/disable-comments.php';
+}
+
+/**
+ * XML-RPC
+ */
+if (!isset($options['xmlrpc'])) {
+    include_once $plugin_path . 'features/disable-xmlrpc.php';
+}
+
+/**
+ * Auteurs
+ */
+if (!isset($options['authors'])) {
+    include_once $plugin_path . 'features/disable-authors-routes.php';
 }
 
 /**

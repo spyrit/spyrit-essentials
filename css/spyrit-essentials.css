@@ -54,12 +54,33 @@
   background: #f3f3f3;
   border-radius: 0;
 }
+.settings_page_spyrit-essentials-options #wpbody .container form .icon:before {
+  color: #c0392b;
+  font-size: 19px;
+  height: 18px;
+}
 .settings_page_spyrit-essentials-options #wpbody .container form table.form-table {
   background: #ffffff;
   margin: 0;
 }
 .settings_page_spyrit-essentials-options #wpbody .container form table.form-table th {
   padding: 20px 15px;
+}
+.settings_page_spyrit-essentials-options #wpbody .container form .warning-section {
+  background: rgba(192, 57, 43, 0.1);
+  padding: 10px 15px;
+  color: #000;
+}
+.settings_page_spyrit-essentials-options #wpbody .container form .warning-section p {
+  margin: 0;
+  padding-left: 30px;
+  position: relative;
+  line-height: 14px;
+}
+.settings_page_spyrit-essentials-options #wpbody .container form .warning-section p .icon {
+  position: absolute;
+  left: 0;
+  top: 4px;
 }
 .settings_page_spyrit-essentials-options #wpbody .container form p.submit {
   text-align: right;

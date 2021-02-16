@@ -1,16 +1,16 @@
 {
   "name" : "Spyrit Essentials",
   "slug" : "spyrit-essentials-updater",
-  "download_url" : "https://code.spyrit.net/wordpress/plugins/spyrit-essentials/0.4/spyrit-essentials.zip",
-  "version" : "0.4",
+  "download_url" : "https://code.spyrit.net/wordpress/plugins/spyrit-essentials/0.4.1/spyrit-essentials.zip",
+  "version" : "0.4.1",
   "requires" : "3.0",
-  "tested" : "5.6",
-  "last_updated" : "2020-08-11 17:40:00",
+  "tested" : "5.6.1",
+  "last_updated" : "2021-02-16 15:50:00",
   "upgrade_notice" : "Une mise à jour de l'extension est disponible.",
   "author_homepage" : "https://www.spyrit.net",
   "sections" : {
     "description" : "L'extension SPYRIT Essentials, réservée aux clients SPYRIT, permet d'accroître la sécurité de votre site.",
     "installation" : "Téléversez l'extension sur votre site Wordpress, activez la et celle-ci sera fonctionnelle.",
-    "changelog" : "<h4>0.4</h4><ul><li>Ajout d'un token pour améliorer la sécurité</li><li>Ajout d'une page d'options</li></ul><h4>0.3.1</h4><ul><li>Ajout d'informations pour le monitoring.</li></ul>"
+    "changelog" : "<h4>0.4.1</h4><ul><li>Optimisations</li><li>Ajout du champ : Activer le XML-RPC</li><li>Ajout du champ : Activer les pages relatives aux auteurs</li><li>Modification du système d'authentification</li></ul><h4>0.4</h4><ul><li>Ajout d'un token pour améliorer la sécurité</li><li>Ajout d'une page d'options</li><li>Ajout de plusieurs éléments améliorant la sécurité</li><li>Correction des informations envoyées au monitoring</li></ul><h4>0.3.1</h4><ul><li>Ajout d'informations pour le monitoring.</li></ul>"
   }
 }
