@@ -1,7 +1,7 @@
 {
   "name" : "Spyrit Essentials",
   "slug" : "spyrit-essentials-updater",
-  "download_url" : "https://code.spyrit.net/wordpress/plugins/spyrit-essentials/0.4.1/spyrit-essentials.zip",
+  "download_url" : "https://code.spyrit.net/wordpress/plugins/spyrit-essentials/0.4.2/spyrit-essentials.zip",
   "version" : "0.4.2",
   "requires" : "3.0",
   "tested" : "5.6.2",
