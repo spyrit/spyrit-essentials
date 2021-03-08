@@ -4,10 +4,10 @@ Plugin Name: SPYRIT Essentials
 Description: Une extension qui permet d'améliorer la sécurité de votre site Wordpress.
 Author: SPYRIT
 Author URI: http://www.spyrit.net
-Version: 0.4.1
+Version: 0.4.2
 */
 
-const SPYRIT_ESSENTIALS_VERSION = "0.4.1";
+const SPYRIT_ESSENTIALS_VERSION = "0.4.2";
 const SPYRIT_ESSENTIALS_REMOTE_INFO_URL = "https://raw.githubusercontent.com/spyrit/spyrit-essentials/master/info.json";
 $plugin_path = plugin_dir_path(__FILE__);
 
@@ -46,7 +46,7 @@ if (!isset($options['comments'])) {
  * Emojis
  */
 if (!isset($options['emojis'])) {
-    include_once $plugin_path . 'features/disable-comments.php';
+    include_once $plugin_path . 'features/disable-emojis.php';
 }
 
 /**
