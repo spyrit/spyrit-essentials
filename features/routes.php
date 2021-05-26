@@ -26,6 +26,10 @@ function spy_check_version(WP_REST_Request $request)
 {
     wp_version_check();
     $currentVersion = get_bloginfo('version');
+    
+    if (!function_exists('get_plugins')) {
+        require_once ABSPATH.'wp-admin/includes/plugin.php';
+    }
     $plugins = get_plugins();
     $versionManager = [
         'blogName' => get_bloginfo('name'),
