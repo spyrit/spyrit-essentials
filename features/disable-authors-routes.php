@@ -7,8 +7,8 @@ defined('ABSPATH') or die('Oops');
 /**
  * Hide the author pages like /?author=1
  */
-if (!function_exists('spy_hide_author_listing')) {
-    function spy_hide_author_listing()
+if (!function_exists('spyrit_essentials_hide_author_listing')) {
+    function spyrit_essentials_hide_author_listing()
     {
         $is_author_set = get_query_var('author', '');
         if ($is_author_set != '' && !is_admin()) {
@@ -16,14 +16,14 @@ if (!function_exists('spy_hide_author_listing')) {
             exit;
         }
     }
-    add_action('template_redirect', 'spy_hide_author_listing');
+    add_action('template_redirect', 'spyrit_essentials_hide_author_listing');
 }
 
 /**
  * Hide the author pages slug like /author/name
  */
-if (!function_exists('spy_hide_author_page')) {
-    function spy_hide_author_page()
+if (!function_exists('spyrit_essentials_hide_author_page')) {
+    function spyrit_essentials_hide_author_page()
     {
         global $wp_query;
         if (is_author()) {
@@ -31,5 +31,5 @@ if (!function_exists('spy_hide_author_page')) {
             status_header(404);
         }
     }
-    add_action('template_redirect', 'spy_hide_author_page');
+    add_action('template_redirect', 'spyrit_essentials_hide_author_page');
 }

@@ -26,15 +26,17 @@ function spy_check_version(WP_REST_Request $request)
 {
     wp_version_check();
     $currentVersion = get_bloginfo('version');
-    $plugins = get_plugins();
     $versionManager = [
+        'code' => 'success',
         'blogName' => get_bloginfo('name'),
         'current' => $currentVersion,
         'php' => phpversion(),
         'debug' => defined('WP_DEBUG') && WP_DEBUG ? 'enabled' : 'disabled',
         'plugins' => [],
+        'themes' => [],
     ];
 
+    $plugins = get_plugins();
     foreach ($plugins as $key => $value) {
         $pluginArr = [
             'name' => $value['TextDomain'],
@@ -44,6 +46,16 @@ function spy_check_version(WP_REST_Request $request)
         $versionManager['plugins'][] = $pluginArr;
     }
 
-    $response = $versionManager;
-    return json_encode($response);
+    $themes = wp_get_themes();
+    $activeTheme = get_option('stylesheet');
+    foreach ($themes as $name => $theme) {
+        $themeArray = [
+            'name' => $name,
+            'version' => $theme['Version'],
+            'active' => ($activeTheme === $name) ? 1 : 0,
+        ];
+        $versionManager['themes'][] = $themeArray;
+    }
+
+    return $versionManager;
 }

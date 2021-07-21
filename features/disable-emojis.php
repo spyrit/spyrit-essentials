@@ -7,8 +7,8 @@ defined('ABSPATH') or die('Oops');
 /**
  * Disable emojis
  */
-if (!function_exists('spy_disable_emojis')) {
-    function spy_disable_emojis()
+if (!function_exists('spyrit_essentials_disable_emojis')) {
+    function spyrit_essentials_disable_emojis()
     {
         remove_action('wp_head', 'print_emoji_detection_script', 7);
         remove_action('admin_print_scripts', 'print_emoji_detection_script');
@@ -18,16 +18,16 @@ if (!function_exists('spy_disable_emojis')) {
         remove_filter('comment_text_rss', 'wp_staticize_emoji');
         remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
 
-        add_filter('tiny_mce_plugins', 'spy_disable_emojis_tinymce');
-        add_filter('wp_resource_hints', 'spy_disable_emojis_remove_dns_prefetch', 10, 2);
+        add_filter('tiny_mce_plugins', 'spyrit_essentials_disable_emojis_tinymce');
+        add_filter('wp_resource_hints', 'spyrit_essentials_disable_emojis_remove_dns_prefetch', 10, 2);
     }
-    add_action('init', 'spy_disable_emojis');
+    add_action('init', 'spyrit_essentials_disable_emojis');
 
 
     /**
      * Filter function used to remove the tinymce emoji plugin.
      */
-    function spy_disable_emojis_tinymce($plugins)
+    function spyrit_essentials_disable_emojis_tinymce($plugins)
     {
         if (is_array($plugins)) {
             return array_diff($plugins, ['wpemoji']);
@@ -39,7 +39,7 @@ if (!function_exists('spy_disable_emojis')) {
     /**
      * Remove emoji CDN hostname from DNS prefetching hints.
      */
-    function spy_disable_emojis_remove_dns_prefetch($urls, $relation_type)
+    function spyrit_essentials_disable_emojis_remove_dns_prefetch($urls, $relation_type)
     {
         if ('dns-prefetch' == $relation_type) {
             /** This filter is documented in wp-includes/formatting.php */

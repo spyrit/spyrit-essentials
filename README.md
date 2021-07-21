@@ -3,7 +3,7 @@
 Contributors: paulkarampournis
 Tags: spyrit, essentials  
 Requires at least: 3.0
-Tested up to: 5.6
+Tested up to: 5.8
 License: CC BY-NC 2.0
 License URI: https://creativecommons.org/licenses/by-nc/2.0/  
 
@@ -13,4 +13,5 @@ Improve security and add monitoring for SPYRIT customers.
 
 ## Installation
 
-Upload the plugin folder to the `/wp-content/plugins/` directory then activate it.  
+Upload the plugin folder to the `/wp-content/plugins/` directory then activate it.
+You need an API Key from SPYRIT Monitoring.
