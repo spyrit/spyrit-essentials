@@ -36,6 +36,9 @@ function spy_check_version(WP_REST_Request $request)
         'themes' => [],
     ];
 
+    if (!function_exists('get_plugins')) {
+        require_once ABSPATH.'wp-admin/includes/plugin.php';
+    }
     $plugins = get_plugins();
     foreach ($plugins as $key => $value) {
         $pluginArr = [
