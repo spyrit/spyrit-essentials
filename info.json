@@ -1,17 +1,17 @@
 {
   "name" : "Spyrit Essentials",
   "slug" : "spyrit-essentials-updater",
-  "download_url" : "https://code.spyrit.net/wordpress/plugins/spyrit-essentials/0.5/spyrit-essentials.zip",
-  "version" : "0.5",
+  "download_url" : "https://code.spyrit.net/wordpress/plugins/spyrit-essentials/0.6/spyrit-essentials.zip",
+  "version" : "0.6",
   "requires" : "3.0",
-  "tested" : "5.8",
-  "last_updated" : "2021-07-21 13:30:00",
+  "tested" : "6.4",
+  "last_updated" : "2024-01-25 14:20:00",
   "upgrade_notice" : "Une mise à jour de l'extension est disponible.",
   "author" : "SPYRIT",
   "author_homepage" : "https://www.spyrit.net",
   "sections" : {
     "description" : "L'extension SPYRIT Essentials, réservée aux clients SPYRIT, permet d'accroître la sécurité de votre site.",
     "installation" : "Téléversez l'extension sur votre site Wordpress, activez la et celle-ci sera fonctionnelle.",
-    "changelog" : "<h4>0.5</h4><ul><li>Ajout du contrôle de la version des thèmes installés</li><li>Renommage des fonctions pour éviter les erreurs liées aux doublons</li></ul><h4>0.4.2</h4><ul><li>Correction d'un bug pour l'affichage des commentaires</li></ul><h4>0.4.1</h4><ul><li>Optimisations</li><li>Ajout du champ : Activer le XML-RPC</li><li>Ajout du champ : Activer les pages relatives aux auteurs</li><li>Modification du système d'authentification</li></ul><h4>0.4</h4><ul><li>Ajout d'un token pour améliorer la sécurité</li><li>Ajout d'une page d'options</li><li>Ajout de plusieurs éléments améliorant la sécurité</li><li>Correction des informations envoyées au monitoring</li></ul><h4>0.3.1</h4><ul><li>Ajout d'informations pour le monitoring.</li></ul>"
+    "changelog" : "<h4>0.6</h4><ul><li>Ajout d'une option de sécurité</li><li>Désactivation de l'alerte pour les mises à jour en arrière-plan</li></ul><h4>0.5</h4><ul><li>Ajout du contrôle de la version des thèmes installés</li><li>Renommage des fonctions pour éviter les erreurs liées aux doublons</li></ul><h4>0.4.2</h4><ul><li>Correction d'un bug pour l'affichage des commentaires</li></ul><h4>0.4.1</h4><ul><li>Optimisations</li><li>Ajout du champ : Activer le XML-RPC</li><li>Ajout du champ : Activer les pages relatives aux auteurs</li><li>Modification du système d'authentification</li></ul><h4>0.4</h4><ul><li>Ajout d'un token pour améliorer la sécurité</li><li>Ajout d'une page d'options</li><li>Ajout de plusieurs éléments améliorant la sécurité</li><li>Correction des informations envoyées au monitoring</li></ul><h4>0.3.1</h4><ul><li>Ajout d'informations pour le monitoring.</li></ul>"
   }
 }

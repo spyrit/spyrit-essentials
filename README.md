@@ -3,7 +3,7 @@
 Contributors: paulkarampournis
 Tags: spyrit, essentials  
 Requires at least: 3.0
-Tested up to: 5.8
+Tested up to: 6.4
 License: CC BY-NC 2.0
 License URI: https://creativecommons.org/licenses/by-nc/2.0/  
 

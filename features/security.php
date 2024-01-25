@@ -20,3 +20,8 @@ if (!function_exists('spyrit_essentials_disable_user_enpoints')) {
     }
     add_filter('rest_endpoints', 'spyrit_essentials_disable_user_enpoints');
 }
+
+/**
+ * Hide WordPress version number
+ */
+remove_action('wp_head', 'wp_generator');
